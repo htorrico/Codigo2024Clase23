@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="LoginWindow" Height="300" Width="400">
     <Window.Resources>
-
+     
         <Style x:Key="inputStyle" TargetType="TextBox">
             <Setter Property="Width" Value="250"/>
             <Setter Property="Height" Value="30"/>
@@ -38,6 +38,7 @@
          HorizontalAlignment="Center"  />
 
             <Button Content="Salir" Width="150" Height="40" 
+                    Style="{StaticResource styleSalir}"
         HorizontalAlignment="Center"  />
         </StackPanel>
     </Grid>

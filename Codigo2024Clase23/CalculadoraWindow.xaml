@@ -82,8 +82,8 @@
             <Button Content="=" Grid.Row="3" Grid.Column="3"/>
 
             <Button Content="/" Grid.Row="4" Grid.Column="0"/>
-            <Button Content="Salir" Grid.Row="4" Grid.ColumnSpan="2"
-                    Grid.Column="2"/>
+            <Button Content="Salir" Style="{StaticResource styleSalir}"
+                    Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2"/>
             
         </Grid>
 
