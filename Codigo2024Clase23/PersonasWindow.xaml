@@ -8,8 +8,16 @@
         Title="PersonasWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Button Content="Buscar" x:Name="btnBuscar" Click="btnBuscar_Click"
-                Style="{StaticResource styleBuscar}"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtNombres" Style="{StaticResource inputStyle}" />
+                <TextBox x:Name="txtApellidos" Style="{StaticResource inputStyle}" />
+                <TextBox x:Name="txtEdad" Style="{StaticResource inputStyle}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Agregar" x:Name="Agregar"  Style="{StaticResource styleBuscar}" Click="Agregar_Click" ></Button>
+                <Button Content="Buscar" x:Name="btnBuscar" Click="btnBuscar_Click" Style="{StaticResource styleBuscar}"></Button>
+            </StackPanel>
+
             <ListView x:Name="lvPersonas">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -17,19 +25,19 @@
 
                             <TextBlock Text="Datos Persona" HorizontalAlignment="Left" Foreground="Red" FontWeight="Bold" Width="100"></TextBlock>
                             <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Nombres}" FontWeight="Bold" Width="100"></TextBlock>
-                            <TextBlock Text="{Binding Apellidos}" Width="50"></TextBlock>
-                            <TextBlock Text="{Binding Edad}"                                       
+                                <TextBlock Text="{Binding Nombres}" FontWeight="Bold" Width="100"></TextBlock>
+                                <TextBlock Text="{Binding Apellidos}" Width="50"></TextBlock>
+                                <TextBlock Text="{Binding Edad}"                                       
                                        FontSize="18"
                                        Foreground="Blue"
                                        Margin="50,0,0,0"
                                        Width="200"></TextBlock>
-                       </StackPanel>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>        
-       
+        </StackPanel>
+
     </Grid>
 </Window>

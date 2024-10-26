@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Codigo2024Clase23
     /// </summary>
     public partial class PersonasWindow : Window
     {
+        ObservableCollection<Persona> personas = new ObservableCollection<Persona>();
         public PersonasWindow()
         {
             InitializeComponent();
@@ -28,15 +30,25 @@ namespace Codigo2024Clase23
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
 
-            List<Persona> personas = new List<Persona>();
+            
             personas.Add(new Persona { Apellidos = "SEVILLA", Nombres = "IVAN", Edad = 36 });
-            personas.Add(new Persona { Apellidos = "JORGE", Nombres = "BRANDON", Edad = 25 });
-            personas.Add(new Persona { Apellidos = "INGA", Nombres = "JHOY", Edad = 25 });
-            personas.Add(new Persona { Apellidos = "CUEVAS", Nombres = "RONALD", Edad = 30 });
-            personas.Add(new Persona { Apellidos = "TORRICO", Nombres = "HUGO", Edad = 32 });
+            //personas.Add(new Persona { Apellidos = "JORGE", Nombres = "BRANDON", Edad = 25 });
+            //personas.Add(new Persona { Apellidos = "INGA", Nombres = "JHOY", Edad = 25 });
+            //personas.Add(new Persona { Apellidos = "CUEVAS", Nombres = "RONALD", Edad = 30 });
+            //personas.Add(new Persona { Apellidos = "TORRICO", Nombres = "HUGO", Edad = 32 });
 
 
             lvPersonas.ItemsSource = personas;
+
+        }
+
+        private void Agregar_Click(object sender, RoutedEventArgs e)
+        {
+            personas.Add(new Persona { 
+                Apellidos = txtApellidos.Text,
+                Nombres = txtNombres.Text, 
+                Edad = Convert.ToInt32(txtEdad.Text) });
+                              
 
         }
     }
