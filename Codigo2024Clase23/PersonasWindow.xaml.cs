@@ -24,22 +24,14 @@ namespace Codigo2024Clase23
         public PersonasWindow()
         {
             InitializeComponent();
+            lvPersonas.ItemsSource = personas;
         }
       
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
-        {
-
-            
-            personas.Add(new Persona { Apellidos = "SEVILLA", Nombres = "IVAN", Edad = 36 });
-            //personas.Add(new Persona { Apellidos = "JORGE", Nombres = "BRANDON", Edad = 25 });
-            //personas.Add(new Persona { Apellidos = "INGA", Nombres = "JHOY", Edad = 25 });
-            //personas.Add(new Persona { Apellidos = "CUEVAS", Nombres = "RONALD", Edad = 30 });
-            //personas.Add(new Persona { Apellidos = "TORRICO", Nombres = "HUGO", Edad = 32 });
-
+        {                        
 
             lvPersonas.ItemsSource = personas;
-
         }
 
         private void Agregar_Click(object sender, RoutedEventArgs e)

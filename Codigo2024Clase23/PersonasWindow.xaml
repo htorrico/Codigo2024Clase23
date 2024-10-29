@@ -15,7 +15,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Content="Agregar" x:Name="Agregar"  Style="{StaticResource styleBuscar}" Click="Agregar_Click" ></Button>
-                <Button Content="Buscar" x:Name="btnBuscar" Click="btnBuscar_Click" Style="{StaticResource styleBuscar}"></Button>
+                <Button Visibility="Hidden"
+                    Content="Buscar" x:Name="btnBuscar" Click="btnBuscar_Click" Style="{StaticResource styleBuscar}"></Button>
             </StackPanel>
 
             <ListView x:Name="lvPersonas">
