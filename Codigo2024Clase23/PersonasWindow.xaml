@@ -29,8 +29,8 @@
                                 <TextBlock Text="{Binding Nombres}" FontWeight="Bold" Width="100"></TextBlock>
                                 <TextBlock Text="{Binding Apellidos}" Width="50"></TextBlock>
                                 <TextBlock Text="{Binding Edad}"                                       
-                                       FontSize="18"
-                                       Foreground="Blue"
+                                       FontSize="{Binding Edad}"
+                                       Foreground="{Binding MiColor}"
                                        Margin="50,0,0,0"
                                        Width="200"></TextBlock>
                             </StackPanel>

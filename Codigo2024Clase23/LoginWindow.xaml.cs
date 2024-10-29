@@ -20,7 +20,7 @@ namespace Codigo2024Clase23
     public partial class LoginWindow : Window
     {
         public LoginWindow()
-        {
+        {            
             InitializeComponent();
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,10 +37,20 @@ namespace Codigo2024Clase23
 
         private void Agregar_Click(object sender, RoutedEventArgs e)
         {
+
+            int edad = Convert.ToInt32(txtEdad.Text);
+            SolidColorBrush color = Brushes.Green; ;
+
+            if (edad > 18)
+                color = Brushes.Red;
+
             personas.Add(new Persona { 
                 Apellidos = txtApellidos.Text,
                 Nombres = txtNombres.Text, 
-                Edad = Convert.ToInt32(txtEdad.Text) });
+                Edad = Convert.ToInt32(txtEdad.Text) ,
+                MiColor= color
+            }            
+            );
                               
 
         }
